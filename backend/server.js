@@ -21,7 +21,7 @@ module.exports= cloudinary;
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors("https://bharath14-star.github.io/car_inventory1/"));
+app.use(cors("https://purnasaisrinivasbusam-arch.github.io/car_inventory1/"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
