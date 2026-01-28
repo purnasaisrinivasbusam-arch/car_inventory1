@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      const repo = "/car_inventory1";
+      const fullPath = location.pathname + location.search;
+
+      // Remove repo name if already present
+      const cleanPath = fullPath.startsWith(repo)
+        ? fullPath.slice(repo.length)
+        : fullPath;
+
+      location.replace(repo + cleanPath);
+    </script>
+  </head>
+  <body></body>
+</html>

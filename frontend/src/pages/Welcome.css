@@ -1,0 +1,165 @@
+/* Custom CSS for Welcome Page */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: fadeIn 1s ease-in-out;
+  padding: 20px;
+}
+
+.welcome-content {
+  max-width: 800px;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  animation: slideIn 1s ease-in-out;
+  margin-bottom: 40px;
+}
+
+.welcome-content h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.welcome-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.welcome-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-buttons .btn {
+  margin: 0 10px;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: transparent;
+}
+
+.welcome-buttons .btn:hover {
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.1);
+}
+
+.features-section {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.feature-block {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 30%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature-block:hover {
+  transform: translateY(-10px);
+}
+
+.feature-icon {
+  font-size: 4rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.feature-block h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.feature-block p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.moving-cars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.car {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 5rem;
+  animation: moveCar 10s linear infinite;
+}
+
+.car-1 {
+  top: 20%;
+  animation-duration: 15s;
+  animation-delay: -5s;
+}
+
+.car-2 {
+  top: 40%;
+  animation-duration: 20s;
+  animation-delay: -10s;
+  font-size: 7rem;
+}
+
+.car-3 {
+  top: 60%;
+  animation-duration: 12s;
+  animation-delay: -2s;
+}
+
+@keyframes moveCar {
+  from {
+    transform: translateX(-150px);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
